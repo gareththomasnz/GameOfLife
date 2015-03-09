@@ -1,12 +1,12 @@
 package gameConsole;
 
-import java.io.Console;
 import java.util.*;
 
 import Game.*;
 
 public class UserInterface {
-	static void main(String[] args)
+	@SuppressWarnings("resource")
+	public static void main(String[] args)
 	{
 		LifeGrid grid = new LifeGrid(25, 65);
 		grid.Randomize();
@@ -15,8 +15,8 @@ public class UserInterface {
 
 		while (!new Scanner(System.in).nextLine().equals("q"))
 		{
-			grid.UpdateState();
-			ShowGrid(grid.currentState);
+				grid.UpdateState();
+				ShowGrid(grid.currentState);
 		}
 	}
 
